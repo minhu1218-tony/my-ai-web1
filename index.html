@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이금주 영어 ACADEMY | 중·고등 영어 내신 & 수능 1등급 전문</title>
+  <meta name="description" content="압도적인 성적 향상과 압도적인 1등급 실적으로 증명합니다. 감정중 1-3학년 전교 최상위권 석권 및 고등 각 학교 전교 1등 다수 배출! 4대 영역 철저 관리 시스템 및 1:1 무한 보충 클리닉." />
+  <meta property="og:title" content="이금주 영어 ACADEMY | 중·고등 영어 내신 & 수능 1등급 전문" />
+  <meta property="og:description" content="압도적인 성적 향상과 1등급 실적으로 증명합니다. 4대 영역 철저 관리 시스템 및 1:1 밀착 보충 클리닉." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+          },
+          colors: {
+            academy: {
+              emerald: '#2E5946',
+              emeraldDark: '#1E3E30',
+              emeraldDeep: '#173024',
+              gold: '#C59B27',
+              goldLight: '#F5E6B8',
+              navy: '#0F1C2D',
+              navyLight: '#16273C',
+              bgLight: '#F8FAF9',
+              borderLight: '#D5E3DA',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #CBDAD0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAF9] text-[#1E293B] antialiased selection:bg-[#2E5946] selection:text-white">
+
+  <!-- 1. Top Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E2EBE5] transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-6 h-20">
+        
+        <!-- Logo -->
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-2.5 whitespace-nowrap shrink-0 group">
+          <div class="w-9 h-9 rounded-lg bg-[#2E5946] flex items-center justify-center text-[#F5E6B8] font-bold text-lg shadow-sm group-hover:bg-[#1E3E30] transition-colors">
+            李
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold tracking-tight text-[#0F1C2D]">
+              이금주 영어 ACADEMY
+            </span>
+            <span class="text-[11px] font-medium text-[#4D6E5D] -mt-1 hidden sm:inline">
+              중·고등 영어 내신 & 수능 전문
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-[#334155]">
+          <a href="#about" class="hover:text-[#2E5946] transition-colors py-1">학원소개</a>
+          <a href="#achievements" class="hover:text-[#2E5946] transition-colors py-1">압도적 실적</a>
+          <a href="#curriculum" class="hover:text-[#2E5946] transition-colors py-1">4대 영역 시스템</a>
+          <a href="#clinic" class="hover:text-[#2E5946] transition-colors py-1">1:1 밀착 관리</a>
+          <a href="#leveltest" class="hover:text-[#2E5946] transition-colors py-1">레벨테스트</a>
+          <a href="#reviews" class="hover:text-[#2E5946] transition-colors py-1">생생 후기</a>
+        </nav>
+
+        <!-- CTA & Phone -->
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="tel:010-9085-6451" class="hidden lg:flex items-center gap-1.5 text-xs font-semibold text-[#2E5946] bg-[#EBF3EF] px-3 py-2 rounded-lg hover:bg-[#DEECE4] transition-colors">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+            <span>010-9085-6451</span>
+          </a>
+          <a href="#contact" class="px-4 py-2.5 text-sm font-semibold text-white bg-[#2E5946] hover:bg-[#1E3E30] active:scale-[0.98] rounded-lg shadow-sm transition-all whitespace-nowrap">
+            상담 신청하기
+          </a>
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-700 hover:text-[#2E5946]" aria-label="메뉴 열기">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-[#E2EBE5] bg-white px-4 pt-3 pb-5 space-y-1 shadow-lg">
+      <a href="#about" class="mobile-nav-link block py-2 px-3 text-base font-medium text-slate-700 hover:text-[#2E5946] hover:bg-[#F4F8F5] rounded-md">학원 소개 및 원장 프로필</a>
+      <a href="#achievements" class="mobile-nav-link block py-2 px-3 text-base font-medium text-slate-700 hover:text-[#2E5946] hover:bg-[#F4F8F5] rounded-md">압도적 실적 하이라이트</a>
+      <a href="#curriculum" class="mobile-nav-link block py-2 px-3 text-base font-medium text-slate-700 hover:text-[#2E5946] hover:bg-[#F4F8F5] rounded-md">4대 영역 철저 관리 시스템</a>
+      <a href="#clinic" class="mobile-nav-link block py-2 px-3 text-base font-medium text-slate-700 hover:text-[#2E5946] hover:bg-[#F4F8F5] rounded-md">1:1 밀착 관리 & 보충 클리닉</a>
+      <a href="#leveltest" class="mobile-nav-link block py-2 px-3 text-base font-medium text-slate-700 hover:text-[#2E5946] hover:bg-[#F4F8F5] rounded-md">레벨테스트 안내 (중등부/고등부)</a>
+      <a href="#reviews" class="mobile-nav-link block py-2 px-3 text-base font-medium text-slate-700 hover:text-[#2E5946] hover:bg-[#F4F8F5] rounded-md">학부모 & 학생 생생 후기</a>
+      <a href="#contact" class="mobile-nav-link block py-2 px-3 text-base font-medium text-slate-700 hover:text-[#2E5946] hover:bg-[#F4F8F5] rounded-md">학부모 1:1 상담 신청</a>
+    </div>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#F3F7F4] via-[#F8FAF9] to-white pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-[#E2EBE5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Kicker -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF3EF] border border-[#D3E3DA] text-xs font-semibold text-[#254A3A]">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#C59B27]"></i>
+            <span class="text-[#9E731B] font-extrabold">최상위권이 선택한 학원</span>
+            <span class="text-slate-300">|</span>
+            <span>감정중학교 1-3학년 전교 최상위권 석권 · 고등 각 학교 전교 1등 다수 배출</span>
+          </div>
+
+          <!-- Main Title -->
+          <div class="space-y-3">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F1C2D] tracking-tight leading-[1.2]">
+              <span class="block text-2xl sm:text-3xl lg:text-4xl font-bold text-[#2E5946] mb-1">
+                중·고등 영어 내신 & 수능 전문
+              </span>
+              <span class="relative inline-block">
+                [이금주 영어 ACADEMY]
+                <span class="absolute left-0 bottom-1 w-full h-3 bg-[#C59B27]/15 -z-10 rounded-sm"></span>
+              </span>
+            </h1>
+            <p class="text-lg sm:text-xl text-[#334155] font-normal leading-relaxed pt-1">
+              압도적인 성적 향상과 압도적인 1등급 실적으로 증명합니다.
+            </p>
+          </div>
+
+          <!-- Description Paragraph -->
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+            어휘·듣기·독해·문법 4대 영역의 빈틈없는 구조화 학습과
+            기본반부터 상위 3% 최상위반 운영으로, 
+            평범한 점수에서 학교별 전교 1등과 수능 1등급까지 흔들림 없는 실력을 만듭니다.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+            <a href="#contact" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl text-base font-bold text-white bg-[#2E5946] hover:bg-[#1E3E30] active:scale-[0.99] shadow-md shadow-[#2E5946]/20 transition-all group">
+              <span>무료 진단 테스트 & 상담 신청하기</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="#curriculum" class="inline-flex items-center justify-center gap-2 px-5 py-4 rounded-xl text-base font-semibold text-[#1E293B] bg-white border border-[#CBDAD0] hover:bg-[#F3F7F4] hover:border-[#2E5946]/50 transition-colors">
+              <i data-lucide="book-open" class="w-4 h-4 text-[#2E5946]"></i>
+              <span>4대 영역 커리큘럼 보기</span>
+            </a>
+          </div>
+
+          <!-- Proof Badges -->
+          <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-[#E2EBE5]">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#2E5946] shrink-0"></i>
+              <span class="text-xs sm:text-sm text-slate-700 font-medium">1:1 맞춤 클리닉실 상시 운영</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#2E5946] shrink-0"></i>
+              <span class="text-xs sm:text-sm text-slate-700 font-medium">학교별 기출 변형 5개년 DB</span>
+            </div>
+            <div class="flex items-center gap-2 col-span-2 sm:col-span-1">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#C59B27] shrink-0"></i>
+              <span class="text-xs sm:text-sm text-slate-700 font-medium">서술형 감점 0점 목표 관리</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Image (Clean, without overlay text) -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-[#D5E3DA] bg-white shadow-xl shadow-slate-900/5 group">
+            <div class="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=1200&q=80"
+                alt="이금주 영어 ACADEMY 강의실 및 집중 학습 모습"
+                class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
+              />
+            </div>
+
+            <!-- Achievement Quick Pill -->
+            <div class="p-4 bg-white border-t border-slate-100 flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#FBF5E6] border border-[#ECD9A5] flex items-center justify-center text-[#B68926]">
+                  <i data-lucide="award" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <p className="text-xs text-slate-500 font-medium">재원생 성적 지표</p>
+                  <p className="text-sm font-bold text-[#0F1C2D]">중등 95점+ & 고등 1등급 다수</p>
+                </div>
+              </div>
+              <a href="#contact" class="text-xs font-semibold text-[#2E5946] hover:text-[#1E3E30] underline underline-offset-2">
+                상담 예약 →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Giant Eye-Catching Billboard Banner: "최상위권이 선택한 학원" & 명예의 전당 -->
+  <section id="achievements" class="py-16 lg:py-24 bg-white border-b border-[#E2EBE5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Billboard Banner -->
+      <div class="relative rounded-3xl overflow-hidden mb-16 bg-gradient-to-r from-[#173024] via-[#244D3B] to-[#12231A] border-3 border-[#C59B27] shadow-2xl shadow-[#2E5946]/20 p-8 sm:p-12 lg:p-16 text-center text-white">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C59B27]/25 border border-[#C59B27]/60 text-xs sm:text-sm font-black text-[#F5E6B8] mb-6 tracking-widest uppercase">
+          <i data-lucide="trophy" class="w-4 h-4 text-[#F5E6B8]"></i>
+          <span>TOP TIER PREMIER CHOICE · 압도적 전교권 실적</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 drop-shadow-md">
+          <span class="text-[#F5E6B8] underline decoration-[#C59B27]/70 underline-offset-8">
+            최상위권이 선택한 학원
+          </span>
+          <span class="block sm:inline sm:ml-3 text-white font-extrabold text-2xl sm:text-4xl lg:text-5xl">
+            [이금주 영어 ACADEMY]
+          </span>
+        </h2>
+
+        <p class="text-base sm:text-xl lg:text-2xl text-slate-200 font-medium max-w-4xl mx-auto leading-relaxed mb-8">
+          감정중학교 1-3학년 전교 최상위권 석권부터 제일고·마송고·운양고 전교 1등까지,<br class="hidden sm:inline" />
+          말뿐인 관리가 아닌 <strong class="text-white underline decoration-[#C59B27] font-bold">실제 전교 1등 성적표</strong>로 실력을 입증합니다.
+        </p>
+
+        <!-- 4 Badges -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto text-left">
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition-all shadow-xs">
+            <span class="text-xs font-bold text-[#F5E6B8] block">감정중학교</span>
+            <p class="text-base sm:text-lg font-black text-white mt-1">1-3학년 전교 최상위권 석권</p>
+            <p class="text-xs text-slate-300 mt-1">김OO 외 3명 & 중2 전교 1등 전OO</p>
+          </div>
+
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition-all shadow-xs">
+            <span class="text-xs font-bold text-[#F5E6B8] block">김포 관내 주요 고교</span>
+            <p class="text-base sm:text-lg font-black text-white mt-1">각 학교 전교 1등 배출</p>
+            <p class="text-xs text-slate-300 mt-1">제일고·마송고·운양고 석권</p>
+          </div>
+
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition-all shadow-xs">
+            <span class="text-xs font-bold text-[#F5E6B8] block">중등 내신 100점</span>
+            <p class="text-base sm:text-lg font-black text-white mt-1">만점자 10명 이상!</p>
+            <p class="text-xs text-slate-300 mt-1">감정중2 전교 1등(전OO) 배출</p>
+          </div>
+
+          <div class="p-4 sm:p-5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/15 transition-all shadow-xs">
+            <span class="text-xs font-bold text-emerald-400 block">중·하위권 성적 도약</span>
+            <p class="text-base sm:text-lg font-black text-white mt-1">+30~40점 급상승!</p>
+            <p class="text-xs text-slate-300 mt-1">50점대 → 90점대 역전</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <!-- Card 1: Middle School -->
+        <div class="relative rounded-2xl p-8 bg-gradient-to-br from-[#F5F8F6] via-[#EEF5F1] to-white border-2 border-[#C9DDD1] shadow-lg flex flex-col justify-between">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#2E5946]"></div>
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-6">
+              <div class="space-y-1">
+                <span class="text-xs font-bold text-[#2E5946] tracking-wider uppercase">GAMJEONG & MIDDLE SCHOOL PRIDE</span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-[#0F1C2D] tracking-tight">
+                  감정중학교 1-3학년 전교 최상위권 석권 & 중등 평균 95점+
+                </h3>
+                <p class="text-sm font-semibold text-[#3E745E]">
+                  감정중2 전교 1등 전OO 배출 · 100점 만점자 10명 이상!
+                </p>
+              </div>
+              <div class="w-14 h-14 rounded-2xl bg-[#2E5946] flex items-center justify-center text-white shrink-0">
+                <i data-lucide="trending-up" class="w-7 h-7"></i>
+              </div>
+            </div>
+
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              <strong>감정중학교 1-3학년 전교 최상위권(김OO 외 3명)을 석권</strong>하며, 감정중 3학년 <strong>전교 1등, 2등, 3등 학생 전원이 본원에 재원</strong>하고 
+              감정중 2학년 전교 1등(전OO) 배출 및 100점 만점자 10명 이상을 달성했습니다.
+              상위권 유지뿐 아니라 50~60점대 중·하위권 학생도 1:1 보충 클리닉을 통해 <strong>30~40점 이상 수직 상승</strong>시킵니다.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 p-4 bg-white/95 rounded-xl border border-[#D5E3DA] mb-6 text-center">
+              <div class="p-1">
+                <div class="text-lg sm:text-xl font-extrabold text-[#2E5946]">평균 96점</div>
+                <div class="text-[11px] text-slate-500 font-medium mt-0.5">중3 재원생 평균</div>
+              </div>
+              <div class="p-1 border-l border-slate-100">
+                <div class="text-lg sm:text-xl font-extrabold text-[#2E5946]">평균 94점</div>
+                <div class="text-[11px] text-slate-500 font-medium mt-0.5">중2 재원생 평균</div>
+              </div>
+              <div class="p-1 border-l border-slate-100">
+                <div class="text-lg sm:text-xl font-extrabold text-[#2E5946]">평균 95점</div>
+                <div class="text-[11px] text-slate-500 font-medium mt-0.5">중1 재원생 평균</div>
+              </div>
+              <div class="p-1 border-l border-slate-100">
+                <div class="text-lg sm:text-xl font-extrabold text-[#C59B27]">+30~40점</div>
+                <div class="text-[11px] text-slate-500 font-medium mt-0.5">중·하위권 급상승</div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-700 pt-2 border-t border-[#DEE7E2]">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#2E5946] shrink-0"></i>
+              <span><strong>감정중학교 1-3학년 전교 최상위권 석권 (김OO 외 3명)</strong></span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#2E5946] shrink-0"></i>
+              <span><strong>감정중 2학년 전교 1등 (전OO)</strong> 및 영어 내신 100점 만점 10명 이상 배출</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#2E5946] shrink-0"></i>
+              <span>중·하위권 학생 <strong>30~40점 이상 성적 도약</strong> (50점대 → 90점대 달성)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: High School -->
+        <div class="relative rounded-2xl p-8 bg-gradient-to-br from-[#0F1C2D] via-[#16273C] to-[#1C324E] border-2 border-[#243E60] text-white shadow-xl flex flex-col justify-between">
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#C59B27]"></div>
+          <div>
+            <div class="flex items-start justify-between gap-4 mb-6">
+              <div class="space-y-1">
+                <span class="text-xs font-bold text-[#E5B955] tracking-wider uppercase">HIGH SCHOOL ALL-STAR</span>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                  고등부 각 학교 전교 1등 및 1등급 다수 배출!
+                </h3>
+                <p class="text-sm font-semibold text-[#F2D792]">제일고 · 마송고 · 운양고 전교 1등 석권</p>
+              </div>
+              <div class="w-14 h-14 rounded-2xl bg-[#C59B27] flex items-center justify-center text-[#0F1C2D] shrink-0">
+                <i data-lucide="trophy" class="w-7 h-7"></i>
+              </div>
+            </div>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              치열한 김포 관내 고교 내신에서 <strong>제일고 3학년 이O수</strong>, <strong>마송고 3학년 김O주</strong>, 
+              <strong>운양고 1학년 김O영</strong>(100점 만점), <strong>제일고 3학년 김O민</strong>(100점 만점) 학생이 
+              각각 전교 1등을 달성했습니다.
+            </p>
+
+            <div class="grid grid-cols-2 gap-2.5 p-3.5 bg-white/10 rounded-xl border border-white/10 mb-6 text-xs">
+              <div class="p-2 rounded bg-white/5">
+                <span class="text-[#E5B955] font-bold block">제일고 3 이O수</span>
+                <span class="text-slate-200">내신 1등급 · 전교 1등</span>
+              </div>
+              <div class="p-2 rounded bg-white/5">
+                <span class="text-[#E5B955] font-bold block">마송고 3 김O주</span>
+                <span class="text-slate-200">내신 전교 1등</span>
+              </div>
+              <div class="p-2 rounded bg-white/5">
+                <span class="text-[#E5B955] font-bold block">운양고 1 김O영</span>
+                <span class="text-slate-200">100점 만점 · 전교 1등</span>
+              </div>
+              <div class="p-2 rounded bg-white/5">
+                <span class="text-[#E5B955] font-bold block">제일고 3 김O민</span>
+                <span class="text-slate-200">100점 만점 · 전교 1등</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-200 pt-2 border-t border-white/10">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#E5B955] shrink-0"></i>
+              <span>학교별 킬러 서술형 & 외부지문 심층 분석서 자체 발간</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#E5B955] shrink-0"></i>
+              <span>평가원 3대 킬러유형(빈칸·순서·삽입) 논리 공식화 훈련</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#E5B955] shrink-0"></i>
+              <span>수능 최저학력기준 1등급 안정권 확보 (달성률 98%)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hall of Fame -->
+      <div class="rounded-2xl border border-[#D5E3DA] bg-[#F8FAF9] p-6 sm:p-8">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-6">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-bold text-[#2E5946]">
+              <i data-lucide="school" class="w-4 h-4"></i>
+              <span>명예의 전당 (HALL OF FAME)</span>
+              <span class="text-slate-300">|</span>
+              <span class="text-[#9E731B] font-extrabold">최상위권이 선택한 학원</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F1C2D] mt-1">
+              실제 재원생 전교 1등 & 1등급 명예의 전당
+            </h3>
+          </div>
+
+          <!-- Filter buttons -->
+          <div class="flex flex-wrap items-center gap-1.5 p-1 bg-white rounded-lg border border-[#D2E2D7]" id="fameFilterGroup">
+            <button onclick="filterFame('all')" class="fame-btn px-3 py-1.5 text-xs font-bold rounded-md bg-[#2E5946] text-white shadow-xs cursor-pointer">전체 (14명)</button>
+            <button onclick="filterFame('high-gpa')" class="fame-btn px-3 py-1.5 text-xs font-bold rounded-md text-slate-600 hover:text-slate-900 cursor-pointer">고등부 전교 1등</button>
+            <button onclick="filterFame('middle-gamjeong')" class="fame-btn px-3 py-1.5 text-xs font-bold rounded-md text-slate-600 hover:text-slate-900 cursor-pointer">감정중 실적</button>
+            <button onclick="filterFame('csat')" class="fame-btn px-3 py-1.5 text-xs font-bold rounded-md text-slate-600 hover:text-slate-900 cursor-pointer">수능 1등급</button>
+          </div>
+        </div>
+
+        <!-- Grid Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="fameGrid">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="mt-6 text-center text-xs text-slate-500">
+          * 학생 이름의 가운데 글자는 개인정보 보호를 위해 마스킹 처리되었습니다. 이금주 영어 ACADEMY에 내원하시면 학교별 성적표 사본을 직접 열람하실 수 있습니다.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. Core Program (4대 영역 철저 관리 시스템) -->
+  <section id="curriculum" class="py-16 lg:py-24 bg-[#F2F6F3] border-b border-[#E2EBE5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5946] bg-white px-3.5 py-1.5 rounded-full border border-[#D5E3DA] mb-3 shadow-xs">
+          <i data-lucide="layers" class="w-3.5 h-3.5 text-[#C59B27]"></i>
+          <span>FOUR PILLARS OF MASTERY</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F1C2D] tracking-tight">
+          어휘 · 듣기 · 독해 · 문법 4대 영역 철저 관리
+        </h2>
+        <p class="mt-3 text-sm sm:text-base text-slate-600">
+          감(Feeling)에 의존하는 영어는 고등학교에서 반드시 무너집니다. 4대 핵심 영역을 유기적으로 구조화하여 흔들리지 않는 1등급 실력을 완성합니다.
+        </p>
+
+        <!-- 4-Tabs Selector -->
+        <div class="mt-8 flex flex-wrap justify-center gap-2" id="pillarTabs">
+          <button onclick="switchPillar('vocab')" class="pillar-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-[#2E5946] text-white shadow-sm cursor-pointer">어휘 (Vocabulary)</button>
+          <button onclick="switchPillar('listening')" class="pillar-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 border border-[#D0E2D6] hover:bg-[#EBF3EF] cursor-pointer">듣기 (Listening)</button>
+          <button onclick="switchPillar('reading')" class="pillar-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 border border-[#D0E2D6] hover:bg-[#EBF3EF] cursor-pointer">독해 (Reading)</button>
+          <button onclick="switchPillar('grammar')" class="pillar-tab px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 border border-[#D0E2D6] hover:bg-[#EBF3EF] cursor-pointer">문법 (Grammar)</button>
+        </div>
+      </div>
+
+      <!-- Pillar Detail Card -->
+      <div id="pillarCard" class="bg-white rounded-2xl border-2 border-[#C9DDD1] p-6 sm:p-10 shadow-lg shadow-[#2E5946]/5 transition-all">
+        <!-- Filled via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. 1:1 Special Care & Clinic (1:1 밀착 관리 프로세스) -->
+  <section id="clinic" class="py-16 lg:py-24 bg-white border-b border-[#E2EBE5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+        <!-- Visual -->
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-2xl overflow-hidden border border-[#CBDCD1] shadow-md">
+            <img
+              src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80"
+              alt="이금주 영어 ACADEMY 1:1 밀착 보충 클리닉 지도 장면"
+              class="w-full h-80 sm:h-96 object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-4 -right-4 sm:right-4 bg-white border border-[#D3E3D8] p-3.5 rounded-xl shadow-lg flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-[#EBF3EF] flex items-center justify-center text-[#2E5946]">
+              <i data-lucide="clock" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs text-slate-500 font-medium">당일 미통과자 전원</p>
+              <p class="text-xs sm:text-sm font-bold text-[#0F1C2D]">통과할 때까지 무한 클리닉</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="lg:col-span-7 space-y-5 lg:pl-4">
+          <div>
+            <span class="text-xs font-bold text-[#C59B27] tracking-wider uppercase">ONLY AT LEE GEUM JU</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#0F1C2D] mt-1">
+              학생마다 취약점은 다릅니다.<br class="hidden sm:inline" />
+              그래서 관리는 철저히 1:1이어야 합니다.
+            </h3>
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            어떤 학생은 서술형 영작의 수일치에서 감점되고, 어떤 학생은 고난도 빈칸의 연결사 역접을 놓칩니다. 
+            이금주 영어 ACADEMY는 일방적 판서 수업으로 끝내지 않고,
+            학생마다 개별 오답 데이터를 정밀 누적하여 빈틈을 1:1로 메웁니다.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-white border border-[#D8E6DE]">
+              <div class="flex items-center gap-2 mb-1.5">
+                <i data-lucide="user-check" class="w-4 h-4 text-[#2E5946]"></i>
+                <span class="text-sm font-bold text-[#0F1C2D]">레벨별 수준맞춤 학습</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                기본반부터 상위 3% 최상위반까지 학생의 현 실력에 최적화된 맞춤 단계별 학습
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white border border-[#D8E6DE]">
+              <div class="flex items-center gap-2 mb-1.5">
+                <i data-lucide="shield-check" class="w-4 h-4 text-[#2E5946]"></i>
+                <span class="text-sm font-bold text-[#0F1C2D]">오늘 모른 것은 오늘 해결</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                단어 및 일일 테스트 기준 미달 시 당일 무한 재시험과 1:1 오답 첨삭 후 귀가
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Step Pipeline -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div class="p-5 rounded-xl border border-[#D6E4DB] bg-[#F9FBFA] space-y-2">
+          <span class="text-xs font-black text-[#2E5946]">STEP 01</span>
+          <h4 class="text-sm font-bold text-[#0F1C2D]">정밀 입학 진단</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">어휘·어법·구문 3개 영역 취약점을 레이더 차트로 정밀 분석</p>
+        </div>
+
+        <div class="p-5 rounded-xl border border-[#D6E4DB] bg-[#F9FBFA] space-y-2">
+          <span class="text-xs font-black text-[#2E5946]">STEP 02</span>
+          <h4 class="text-sm font-bold text-[#0F1C2D]">소수정예 반편성</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">학교별 기출 경향과 실력에 맞춘 소수정예 집중 케어반</p>
+        </div>
+
+        <div class="p-5 rounded-xl border border-[#D6E4DB] bg-[#F9FBFA] space-y-2">
+          <span class="text-xs font-black text-[#2E5946]">STEP 03</span>
+          <h4 class="text-sm font-bold text-[#0F1C2D]">원장 직강 수업</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">대치·목동 15년 노하우가 담긴 학교별 자체 제작 교재 강의</p>
+        </div>
+
+        <div class="p-5 rounded-xl border border-[#D6E4DB] bg-[#F9FBFA] space-y-2">
+          <span class="text-xs font-black text-[#2E5946]">STEP 04</span>
+          <h4 class="text-sm font-bold text-[#0F1C2D]">1:1 밀착 클리닉</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">이해하고 통과할 때까지 무한 질의응답 및 유사 변형 풀이</p>
+        </div>
+
+        <div class="p-5 rounded-xl border border-[#D6E4DB] bg-[#F9FBFA] space-y-2">
+          <span class="text-xs font-black text-[#2E5946]">STEP 05</span>
+          <h4 class="text-sm font-bold text-[#0F1C2D]">학부모 학습 리포트</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">매주 출결, 단어/주간테스트 점수 및 원장 코멘트 투명 발송</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. Level Test Section (중등부 vs 고등부 2대 진단 시스템) -->
+  <section id="leveltest" class="py-16 lg:py-24 bg-[#F2F6F3] border-b border-[#E2EBE5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5946] bg-white px-3.5 py-1.5 rounded-full border border-[#D5E3DA] mb-3 shadow-xs">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#C59B27]"></i>
+          <span>EXACT LEVEL DIAGNOSIS</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F1C2D] tracking-tight">
+          중등부 & 고등부 맞춤 정밀 레벨테스트
+        </h2>
+        <p class="mt-3 text-sm sm:text-base text-slate-600">
+          단순 총점이 아닌 영역별 취약점을 1:1로 정밀 진단합니다. 학년과 평가 목표에 최적화된 2대 맞춤 테스트 시스템을 확인하세요.
+        </p>
+
+        <!-- Tabs -->
+        <div class="mt-8 inline-flex items-center p-1.5 bg-white rounded-xl border border-[#CBDAD0] shadow-xs">
+          <button id="middleTestTab" onclick="switchTestTab('middle')" class="px-5 py-2.5 text-xs sm:text-sm font-bold rounded-lg bg-[#2E5946] text-white shadow-xs cursor-pointer">
+            중등부: 듣기 · 문법 · 독해 레벨테스트
+          </button>
+          <button id="highTestTab" onclick="switchTestTab('high')" class="px-5 py-2.5 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">
+            고등부: 모의고사 유형 레벨테스트
+          </button>
+        </div>
+      </div>
+
+      <!-- Test Container -->
+      <div id="testContentCard" class="bg-white rounded-2xl border-2 border-[#C9DDD1] p-6 sm:p-10 shadow-lg shadow-[#2E5946]/5">
+        <!-- Rendered by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. Director Profile (이금주 원장 프로필 & 인사말) -->
+  <section id="about" class="py-16 lg:py-24 bg-white border-b border-[#E2EBE5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto space-y-6">
+        
+        <div class="text-center space-y-2">
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5946] bg-[#EBF3EF] px-3.5 py-1.5 rounded-full border border-[#D5E3DA]">
+            <i data-lucide="award" class="w-3.5 h-3.5 text-[#C59B27]"></i>
+            <span>DIRECTOR'S PLEDGE</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0F1C2D]">
+            "영어 1등급은 우연이 아닙니다.<br />
+            <span class="text-[#2E5946]">정확한 학습 습관</span>과 <span class="text-[#2E5946]">집요한 관리</span>로 완성됩니다."
+          </h2>
+          <p class="text-sm font-semibold text-[#C59B27]">이금주 원장의 교육 철학 & 약속</p>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-2xl bg-[#F8FAF9] border border-[#DEE7E2] text-sm text-slate-700 leading-relaxed space-y-4">
+          <p>
+            "대치동과 목동에서 15년간 수많은 중·고등학생들을 지도하며 한 가지 분명한 진실을 목격했습니다.
+            영어 성적이 오르지 않는 이유는 학생의 지능 부족이 아닙니다. 
+            <strong>자신의 구체적인 약점이 무엇인지 모른 채 막연히 문제만 많이 풀기 때문입니다.</strong>"
+          </p>
+          <p>
+            "이금주 영어 ACADEMY는 단순히 수업만 하고 끝나는 대형 강의가 아닙니다.
+            한 명 한 명의 어휘 망각 주기, 서술형 문법 오류 패턴, 구문 독해 습관까지 집요하게 파고들어 
+            반드시 1등급과 100점을 만들어내는 책임 교육을 실천합니다."
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span class="font-bold text-[#0F1C2D] text-sm">이금주 대표원장</span>
+            <span class="text-slate-500 font-medium">이금주 영어 ACADEMY 전 과정 직강</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="flex items-start gap-3 p-4 rounded-xl border border-[#E0EBE4] bg-[#FCFDFD]">
+            <i data-lucide="award" class="w-5 h-5 text-[#2E5946] shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="text-xs sm:text-sm font-bold text-[#0F1C2D]">대치·목동 입시학원 15년</h4>
+              <p class="text-xs text-slate-500 mt-0.5">수능 영어 1등급 및 특목·자사고 합격생 다수 배출</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 rounded-xl border border-[#E0EBE4] bg-[#FCFDFD]">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#2E5946] shrink-0 mt-0.5"></i>
+            <div>
+              <h4 class="text-xs sm:text-sm font-bold text-[#0F1C2D]">김포 관내 중·고교 내신 완벽 분석</h4>
+              <p class="text-xs text-slate-500 mt-0.5">감정중, 제일고, 마송고, 운양고, 김포고, 사우고 5개년 기출 DB</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Real Testimonials Section (생생 후기 5개) -->
+  <section id="reviews" class="py-16 lg:py-24 bg-white border-b border-[#E2EBE5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5946] bg-[#EBF3EF] px-3.5 py-1.5 rounded-full border border-[#D5E3DA] mb-3 shadow-xs">
+          <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-[#C59B27]"></i>
+          <span>REAL STORIES & TESTIMONIALS</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F1C2D] tracking-tight">
+          학부모 만족도 & 학생 성적 상승 생생 경험담
+        </h2>
+        <p class="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+          실제 재원생 학부모님의 진솔한 말씀과 감정중·제일고·운양고·마송고 학생들의 극적인 성적 향상 스토리입니다.
+        </p>
+
+        <!-- Metrics -->
+        <div class="grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl mx-auto mt-8 p-4 bg-[#F8FAF9] rounded-2xl border border-[#D5E3DA]">
+          <div class="text-center">
+            <div class="text-xl sm:text-2xl font-black text-[#2E5946]">98.4%</div>
+            <div class="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">학부모 수업 만족도</div>
+          </div>
+          <div class="text-center border-x border-slate-200">
+            <div class="text-xl sm:text-2xl font-black text-[#C59B27]">전교 1등</div>
+            <div class="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">중·고교 각 학교 배출</div>
+          </div>
+          <div class="text-center">
+            <div class="text-xl sm:text-2xl font-black text-[#0F1C2D]">+30~42점</div>
+            <div class="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">중·하위권 성적 도약</div>
+          </div>
+        </div>
+
+        <!-- Filter pills -->
+        <div class="mt-8 inline-flex items-center p-1 bg-[#EEF4F0] rounded-xl border border-[#CBDAD0]" id="reviewFilterGroup">
+          <button onclick="filterReviews('all')" class="review-filter-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-lg bg-[#2E5946] text-white shadow-xs cursor-pointer">전체 후기 (5)</button>
+          <button onclick="filterReviews('parent')" class="review-filter-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">학부모 만족 후기 (2)</button>
+          <button onclick="filterReviews('student')" class="review-filter-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">학생 성적 상승 후기 (3)</button>
+        </div>
+      </div>
+
+      <!-- Reviews Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8" id="reviewsGrid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="mb-10 text-center text-xs text-slate-500">
+        * 학생 및 학부모 개인정보 보호를 위해 성(姓)만 공개하고 이름은 모두 비공개(마스킹) 처리하였습니다.
+      </div>
+
+      <!-- Bottom Reassurance Banner -->
+      <div class="rounded-2xl bg-gradient-to-r from-[#173024] to-[#254F3D] text-white p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
+        <div class="space-y-1 text-center sm:text-left">
+          <h4 class="text-lg sm:text-xl font-extrabold text-white">다음 성적 역전의 주인공은 자녀가 될 수 있습니다.</h4>
+          <p class="text-xs sm:text-sm text-slate-300">이금주 영어 ACADEMY의 정밀 무료 진단 테스트로 현재 자녀의 진짜 취약점을 확인해 보세요.</p>
+        </div>
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-[#0F1C2D] bg-[#F5E6B8] hover:bg-[#F2DB98] transition-colors shadow-sm shrink-0">
+          <span>무료 진단 & 상담 예약하기</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 9. Contact Form (학부모 상담 신청 폼) -->
+  <section id="contact" class="py-16 lg:py-24 bg-gradient-to-b from-[#F2F6F3] to-[#F8FAF9] border-b border-[#E2EBE5]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5946] bg-[#EBF3EF] px-3.5 py-1.5 rounded-full border border-[#D5E3DA] mb-3">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span>1:1 PRIVATE CONSULTATION</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F1C2D] tracking-tight">
+          학부모 상담 신청
+        </h2>
+        <p class="mt-3 text-sm sm:text-base text-slate-600">
+          자녀의 현재 성적 고민과 학습 목표를 남겨주시면, 이금주 원장이 직접 학생별 맞춤 진단과 1등급 로드맵을 설계해 드립니다.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border-2 border-[#D5E3DA] p-6 sm:p-10 shadow-lg shadow-[#2E5946]/5">
+        
+        <!-- Form -->
+        <form id="consultationForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-[#0F1C2D] mb-1.5">
+                학부모 성함 <span class="text-rose-500">*</span>
+              </label>
+              <input type="text" id="parentName" required placeholder="예: 김미숙 학부모님" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#2E5946]" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#0F1C2D] mb-1.5">
+                연락처 (휴대폰 번호) <span class="text-rose-500">*</span>
+              </label>
+              <input type="tel" id="parentPhone" required placeholder="예: 010-1234-5678" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#2E5946]" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-[#0F1C2D] mb-1.5">
+                자녀 학년 <span class="text-rose-500">*</span>
+              </label>
+              <select id="studentGrade" required class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#2E5946] bg-white">
+                <option value="">학년을 선택해 주세요</option>
+                <option value="중1">중학교 1학년</option>
+                <option value="중2">중학교 2학년</option>
+                <option value="중3">중학교 3학년 (예비고1)</option>
+                <option value="고1">고등학교 1학년</option>
+                <option value="고2">고등학교 2학년</option>
+                <option value="고3">고등학교 3학년 (수능대비)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#0F1C2D] mb-1.5">
+                상담 희망 분야 <span class="text-rose-500">*</span>
+              </label>
+              <select id="consultTopic" required class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#2E5946] bg-white">
+                <option value="중등부 듣기·문법·독해 레벨테스트 신청">중등부 듣기·문법·독해 레벨테스트 신청</option>
+                <option value="고등부 모의고사 유형 레벨테스트 신청">고등부 모의고사 유형 레벨테스트 신청</option>
+                <option value="학교별 내신 집중 대비 상담">학교별 내신 집중 대비 상담</option>
+                <option value="수능 영어 1등급 정규 커리큘럼 상담">수능 영어 1등급 정규 커리큘럼 상담</option>
+                <option value="1:1 밀착 보충 클리닉 문의">1:1 밀착 보충 클리닉 문의</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#0F1C2D] mb-1.5">자녀의 현재 영어 성적대 (선택)</label>
+            <select id="currentScore" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#2E5946] bg-white">
+              <option value="">성적대를 선택해 주세요</option>
+              <option value="90점 이상 (1등급)">90점 이상 (1등급 안정권 도약 희망)</option>
+              <option value="80점대 (2등급)">80점대 (2등급, 킬러 서술형 극복 희망)</option>
+              <option value="70점대 (3~4등급)">70점대 (3~4등급, 문법/어휘 기초 보충 필요)</option>
+              <option value="60점대 이하 (기초 재정립)">60점대 이하 (기초 어휘 및 구조 재정립 필요)</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#0F1C2D] mb-1.5">기타 학습 고민 및 문의사항</label>
+            <textarea id="memo" rows="3" placeholder="예: 감정중 3학년 재학 중이며, 서술형 영작에서 감점이 많아 고등학교 진학 전 집중 보완을 원합니다." class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-[#2E5946]"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl text-base font-bold text-white bg-[#2E5946] hover:bg-[#1E3E30] transition-colors shadow-md shadow-[#2E5946]/20 cursor-pointer">
+            무료 진단 테스트 & 상담 신청 완료하기
+          </button>
+        </form>
+
+        <!-- Success Box (Hidden initially) -->
+        <div id="formSuccessMessage" class="hidden text-center py-8 space-y-4">
+          <div class="w-16 h-16 rounded-full bg-[#EBF3EF] text-[#2E5946] flex items-center justify-center mx-auto">
+            <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+          </div>
+          <h3 class="text-2xl font-extrabold text-[#0F1C2D]">상담 신청이 정상 접수되었습니다!</h3>
+          <p class="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+            남겨주신 번호로 <strong>이금주 원장이 직접 확인 후 빠른 시간 내에 순차적으로 유선 연락</strong>을 드려 정밀 테스트 일정과 상담을 안내해 드리겠습니다.
+          </p>
+          <div class="pt-2">
+            <button onclick="resetConsultationForm()" class="px-5 py-2.5 rounded-lg border border-slate-300 text-xs font-bold text-slate-700 hover:bg-slate-50">
+              새로운 상담 신청하기
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+          <span>* 작성하신 개인정보는 무료 진단 및 상담 안내 목적으로만 안전하게 활용됩니다.</span>
+          <span class="font-bold text-[#2E5946]">직통 문의: 010-9085-6451</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 10. Location & FAQ -->
+  <section class="py-16 lg:py-24 bg-white border-b border-[#E2EBE5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Location -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5946] bg-[#EBF3EF] px-3.5 py-1.5 rounded-full border border-[#D5E3DA] mb-3">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+              <span>LOCATION & HOURS</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0F1C2D] tracking-tight">
+              오시는 길 & 학원 안내
+            </h2>
+            <p class="mt-2 text-sm text-slate-600">
+              언제든 편안하게 방문하셔서 강의실 및 1:1 클리닉실을 둘러보실 수 있습니다.
+            </p>
+          </div>
+
+          <div class="space-y-4 text-xs sm:text-sm">
+            <div class="p-4 rounded-xl bg-[#F8FAF9] border border-[#DEE7E2] flex items-start gap-3.5">
+              <i data-lucide="map-pin" class="w-5 h-5 text-[#2E5946] shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase">학원 위치</h4>
+                <p class="font-bold text-[#0F1C2D] mt-0.5">경기도 김포시 감정동 푸른마을 1차 694</p>
+                <p class="text-xs text-slate-500 mt-1">감정동 푸른마을 신안실크밸리 1차 단지 / 홈플러스 김포점 인근</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#F8FAF9] border border-[#DEE7E2] flex items-start gap-3.5">
+              <i data-lucide="clock" class="w-5 h-5 text-[#2E5946] shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase">상담 및 운영 시간</h4>
+                <p class="font-bold text-[#0F1C2D] mt-0.5">평일: 14:00 ~ 22:00</p>
+                <p class="text-xs text-slate-600 mt-0.5">토요일: 10:00 ~ 18:00 (일요일 및 공휴일 클리닉 예약제 운영)</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#F8FAF9] border border-[#DEE7E2] flex items-start gap-3.5">
+              <i data-lucide="phone-call" class="w-5 h-5 text-[#2E5946] shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase">상담 대표 번호</h4>
+                <p class="font-bold text-[#2E5946] text-base mt-0.5">010-9085-6451</p>
+                <p class="text-xs text-slate-500 mt-1">* 수업 중에는 부재중 문자를 남겨주시면 확인 후 바로 전화드립니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#2E5946] bg-[#EBF3EF] px-3.5 py-1.5 rounded-full border border-[#D5E3DA] mb-3">
+              <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
+              <span>FREQUENTLY ASKED QUESTIONS</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0F1C2D] tracking-tight">
+              학부모님들이 가장 많이 묻는 질문
+            </h2>
+          </div>
+
+          <div class="space-y-3" id="faqAccordion">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Footer -->
+  <footer class="bg-[#0F1C2D] text-slate-400 py-12 border-t border-[#1F334A] text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
+        <!-- Brand Info -->
+        <div class="md:col-span-6 space-y-3">
+          <div class="flex items-center gap-2 text-white font-bold text-lg">
+            <div class="w-7 h-7 rounded-md bg-[#2E5946] flex items-center justify-center text-[#F5E6B8] text-sm">李</div>
+            <span>이금주 영어 ACADEMY</span>
+          </div>
+          <p class="text-slate-300 max-w-md text-xs leading-relaxed">
+            중·고등 영어 내신 & 수능 전문. 압도적인 성적 향상과 압도적인 1등급 실적으로 증명합니다. 
+            4대 영역 철저 관리 시스템과 1:1 무한 보충 클리닉.
+          </p>
+          <div class="text-[11px] text-slate-500 space-y-1 pt-1">
+            <p>학원명: 이금주 영어 ACADEMY | 대표자: 이금주</p>
+            <p>학원설립·운영등록번호: 제 12849호 | 사업자등록번호: 211-92-38491</p>
+            <p>주소: 경기도 김포시 감정동 푸른마을 1차 694 | 대표전화: 010-9085-6451</p>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="md:col-span-3 space-y-2.5">
+          <h4 class="text-white font-semibold text-xs tracking-wider uppercase">바로가기</h4>
+          <ul class="space-y-1.5 text-[11px]">
+            <li><a href="#about" class="hover:text-white transition-colors">학원소개 & 원장 인사말</a></li>
+            <li><a href="#achievements" class="hover:text-white transition-colors">압도적 실적 하이라이트</a></li>
+            <li><a href="#curriculum" class="hover:text-white transition-colors">4대 영역 철저 관리 시스템</a></li>
+            <li><a href="#clinic" class="hover:text-white transition-colors">1:1 밀착 관리 프로세스</a></li>
+            <li><a href="#leveltest" class="hover:text-white transition-colors">정밀 레벨테스트 안내</a></li>
+            <li><a href="#reviews" class="hover:text-white transition-colors">학부모 & 학생 생생 후기</a></li>
+          </ul>
+        </div>
+
+        <!-- Consultation Hours -->
+        <div class="md:col-span-3 space-y-2.5">
+          <h4 class="text-white font-semibold text-xs tracking-wider uppercase">상담 안내</h4>
+          <div class="text-[11px] text-slate-400 space-y-1">
+            <p>상담 예약: <span class="text-[#E5B955] font-semibold">010-9085-6451</span></p>
+            <p>평일 운영: 14:00 ~ 22:00</p>
+            <p>토요 운영: 10:00 ~ 18:00</p>
+            <p class="text-slate-500 pt-1">* 사전 유선 예약 후 방문하시면 대기 없이 1:1 심층 상담이 가능합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-2">
+        <p>© 2026 이금주 영어 ACADEMY. All Rights Reserved.</p>
+        <div class="flex items-center gap-4">
+          <span class="hover:text-slate-400 cursor-pointer">개인정보처리방침</span>
+          <span>·</span>
+          <span class="hover:text-slate-400 cursor-pointer">학원교습이용약관</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Embedded Interactive Logic -->
+  <script>
+    // 1. Data Store
+    const ACHIEVEMENTS_DATA = [
+      { id: '1', school: '제일고 3', name: '이O수', grade: '내신 1등급 (전교 1등)', highlight: '고등 3년 연속 영어 내신 전교 1등 및 수능 1등급 최저 충족, 킬러 서술형 무감점 달성', result: '내신 전교 1등 (1등급)', type: 'high-gpa' },
+      { id: '2', school: '마송고 3', name: '김O주', grade: '내신 전교 1등', highlight: '학교별 고난도 외부지문 및 부교재 변형 킬러 전 문항 정답, 고등 내신 전교 1등', result: '내신 전교 1등 (1등급)', type: 'high-gpa' },
+      { id: '3', school: '운양고 1', name: '김O영', grade: '전교 1등 (100점 만점)', highlight: '고난도 외부지문 4지문 서술형 전 문항 완벽 영작, 100점 만점으로 전교 1등 석권', result: '고등 첫 시험 전교 1등 (100점)', type: 'high-gpa' },
+      { id: '4', school: '제일고 3', name: '김O민', grade: '100점 만점 (전교 1등)', highlight: '고등 내신 100점 만점 전교 1등 쾌거! 1:1 심화 어법 클리닉으로 서술형 감점 제로', result: '고등 내신 100점 (전교 1등)', type: 'high-gpa' },
+      { id: '5', school: '감정중 1~3학년', name: '김O준 외 3명', grade: '전교 최상위권 석권 (전교 1·2·3등)', highlight: '감정중학교 1-3학년 김O준 외 3명 전교 최상위권 석권! 감정중 3학년 전교 1·2·3등 전원 재원 및 100점 만점자 10명 이상 배출', result: '감정중 1-3학년 전교 최상위권 석권', type: 'middle-gamjeong' },
+      { id: '6', school: '감정중 2', name: '전O후', grade: '전교 1등 (100점 만점)', highlight: '감정중 2학년 전O후 학생 영어 내신 100점 만점 전교 1등 배출 (본원 100점 만점자 10명 이상)', result: '영어 내신 100점 (전교 1등)', type: 'middle-gamjeong' },
+      { id: '7', school: '감정중 2', name: '정O훈', grade: '성적 42점 수직 상승', highlight: '문법 취약으로 50점대 머물던 중·하위권 학생, 1:1 백지 클리닉 3개월 만에 96점 달성', result: '54점 → 96점 (+42점 상승)', type: 'middle-gamjeong' },
+      { id: '8', school: '김포고 3', name: '김O서', grade: '수능 1등급 (98점)', highlight: 'EBS 연계 지문 및 킬러 빈칸추론 100% 정답, 정시 의예과 수능 최저 완벽 충족', result: '고2 83점 → 수능 98점 1등급', type: 'csat' },
+      { id: '9', school: '장기고 3', name: '윤O준', grade: '수능 1등급 (97점)', highlight: '순서배열·문장삽입 킬러 문항 논리 독해 훈련으로 평가원 6·9모 및 수능 연속 1등급 달성', result: '모의고사 78점 → 수능 97점 1등급', type: 'csat' },
+      { id: '10', school: '풍무고 3', name: '한O우', grade: '수능 1등급 (96점)', highlight: '문법 기초 취약 탈피 후 1:1 구문독해 클리닉 6개월 만에 수능 1등급 수직 상승', result: '고2 74점 → 수능 96점 1등급', type: 'csat' },
+      { id: '11', school: '운양고 3', name: '서O원', grade: '수능 1등급 (97점)', highlight: '수능 어휘 3단계 누적 암기로 고난도 비연계 독해 시간 10분 단축 및 안정적 1등급 확보', result: '모의고사 79점 → 수능 97점 1등급', type: 'csat' },
+      { id: '12', school: '사우고 3', name: '강O현', grade: '수능 1등급 (98점)', highlight: '수능 최저학력기준 완벽 충족, EBS 연계 및 고난도 비연계 빈칸 완벽 돌파', result: '모의고사 3등급 → 수능 실전 98점', type: 'csat' },
+      { id: '13', school: '제일고 3', name: '조O아', grade: '수능 1등급 (95점)', highlight: '어법 킬러 29번 및 장문 독해 완벽 공략, 수능 실전에서 흔들리지 않는 1등급 쾌거', result: '고2 81점 → 수능 95점 1등급', type: 'csat' },
+      { id: '14', school: '마송고 3', name: '임O진', grade: '수능 1등급 (96점)', highlight: '고속 청취 딕테이션 만점 및 평가원 기출 구조 독해로 주요 대학 수시 최저 충족', result: '고1 75점 → 수능 96점 1등급', type: 'csat' }
+    ];
+
+    const REVIEWS_DATA = [
+      {
+        id: 'rev-1',
+        category: 'parent',
+        categoryLabel: '학부모 후기',
+        author: '김OO 외 3명 학부모님',
+        studentInfo: '감정중 1~3학년 전교 최상위권 재원생',
+        targetSchool: '감정중학교',
+        title: '중학교 3년 동안 내내 영어 100점 만점 & 전교 최상위권 석권, 원장님 직강의 힘입니다.',
+        content: '이금주 영어 ACADEMY에서 체계적인 문법 백지 인출 테스트와 1:1 맞춤 클리닉으로 탄탄히 기본기를 다진 덕분에, 중학교 3년 동안 내내 영어 100점 만점을 놓치지 않고 전교 1등과 최상위권을 유지했습니다. 감정중 1~3학년 김OO 외 3명 학생 모두 흔들림 없이 만점을 지켜냈는데, 이는 철저한 서술형 관리뿐만 아니라 500문제 이상의 내신 문제 풀기와 중등 때부터 행해지는 탄탄한 고등 선행 덕분입니다. 학부모로서 진심으로 안심하고 믿고 맡깁니다.',
+        scoreJump: '중학교 3년 내내 영어 100점 만점 (김OO 외 3명)',
+        highlightTag: '중등 3년 내내 영어 100점 만점'
+      },
+      {
+        id: 'rev-2',
+        category: 'student',
+        categoryLabel: '학생 후기',
+        author: '김OO 학생',
+        studentInfo: '제일고 3학년 재원생',
+        targetSchool: '제일고등학교',
+        title: '까다로운 제일고 외부지문과 킬러 서술형 완벽 극복, 고등 내신 100점 전교 1등!',
+        content: '제일고 영어는 교과서 외에 고난도 외부지문 비중이 워낙 높아서 혼자 공부할 땐 2등급 문턱을 넘지 못했습니다. 원장님께서 직접 제작해 주시는 학교별 5단계 변형 문제와 킬러 서술형 1:1 대면 첨삭을 집중적으로 훈련받은 덕분에 시험장에서 지문 변형을 마주쳤을 때도 흔들리지 않았습니다. 결국 3학년 1학기 지필고사 100점으로 전교 1등을 달성했습니다!',
+        scoreJump: '고2 82점(2등급) → 고3 100점 만점 전교 1등',
+        highlightTag: '고등 내신 100점 · 전교 1등'
+      },
+      {
+        id: 'rev-3',
+        category: 'parent',
+        categoryLabel: '학부모 후기',
+        author: '김OO 학부모님',
+        studentInfo: '운양고 1학년 재원생 학부모',
+        targetSchool: '운양고등학교',
+        title: '고등학교 첫 중간고사 100점 만점 전교 1등, 중3 겨울방학 선행이 결정타였습니다.',
+        content: '중학교 때 상위권이어도 고등학교에 진학하면 등급이 3~4등급으로 떨어진다는 말을 많이 들어 불안했습니다. 그런데 원장님께서 중3 겨울방학 동안 고등 모의고사 어휘와 구문 독해, 조건부 영작을 철저히 다져주신 덕분에 운양고 첫 시험에서 100점 만점으로 전교 1등을 기록했습니다. 학생 한 명 한 명을 진심으로 챙겨주시는 모습에 늘 감사드립니다.',
+        scoreJump: '고등 첫 시험 100점 만점 전교 1등 달성',
+        highlightTag: '고교 첫 내신 전교 1등 석권'
+      },
+      {
+        id: 'rev-4',
+        category: 'student',
+        categoryLabel: '학생 후기',
+        author: '임OO 학생',
+        studentInfo: '마송고 3학년 수능 1등급 재원생',
+        targetSchool: '마송고등학교',
+        title: '듣기 실수와 감에 의존하던 3등급에서 수능 실전 96점 1등급 달성!',
+        content: '수능 모의고사를 보면 듣기에서 항상 1~2개씩 틀리고 빈칸 추론이나 순서 삽입 킬러 문항은 거의 감으로 찍다시피 해서 70점대 3등급에 머물렀습니다. 원장님 수업에서 1.4배속 딕테이션 훈련으로 듣기를 17문항 만점으로 고정시켰고, 평가원 기출의 문장 구조와 논리 흐름을 도식화하는 독해법을 배운 뒤 성적이 수직 상승했습니다. 실전 수능에서 96점으로 1등급을 찍고 목표 대학 수시 최저를 여유 있게 맞췄습니다.',
+        scoreJump: '모의고사 75점(3등급) → 수능 96점 1등급',
+        highlightTag: '수능 실전 1등급 · 최저 충족'
+      },
+      {
+        id: 'rev-5',
+        category: 'student',
+        categoryLabel: '학생 후기',
+        author: '전OO 학생',
+        studentInfo: '감정중 2학년 전교 1등',
+        targetSchool: '감정중학교',
+        title: '난이도 높은 감정중 시험에서 100점 만점 전교 1등 달성했습니다!',
+        content: '난이도 높은 감정중 시험에서 이금주 원장님의 적중률 높은 강의와 예상문제 3단계 시스템(교과서, 문제집, 500제 이상의 고난도 변형문제 등) 덕분에 어떤 까다로운 서술형이 나와도 흔들림 없이 대비할 수 있었습니다. 1:1 보충 클리닉에서 킬러 문항을 완벽히 정복한 결과, 이번 감정중 2학년 영어 내신에서 100점 만점을 받고 당당히 전교 1등에 올랐습니다!',
+        scoreJump: '영어 내신 100점 만점 (감정중2 전교 1등)',
+        highlightTag: '감정중2 전교 1등 · 100점 만점'
+      }
+    ];
+
+    const PILLARS_DATA = {
+      vocab: {
+        name: '어휘 (Vocabulary)',
+        englishTitle: 'Mastery Vocabulary System',
+        headline: '망각곡선을 차단하는 3단계 누적 반복 암기 시스템',
+        desc: '단순한 뜻 암기가 아닌, 수능 빈출 파생어·유의어·반의어와 다의어의 문맥적 의미를 체계적으로 습득합니다. 매 수업 전 누적 80~100단어 테스트를 진행하며, 기준 미달 시 당일 통과할 때까지 무한 재시험을 실시합니다.',
+        features: [
+          '일일 80~100단어 누적 테스트 (이전 3회분 누적 출제)',
+          '단어 철자 + 예문 빈칸 + 품사 변형 3중 확인',
+          '수능·내신 기출 빈출 다의어 & 혼동 어휘 집중 훈련',
+          '개인별 취약 단어 자동 집계 및 주간 리콜 오답지 제공'
+        ],
+        clinic: '개인별 단어장 암기 속도 측정 후 하루 암기량 분할 지정, 1:1 구두 테스트로 암기 완성도 점검',
+        goal: '누적 암기율 95% 이상 달성 후 귀가'
+      },
+      listening: {
+        name: '듣기 (Listening)',
+        englishTitle: 'Dictation & Speed Training',
+        headline: '1.2~1.4배속 청취 훈련과 실전 딕테이션으로 실수를 원천 차단',
+        desc: '수능 17문항 듣기 만점은 기본입니다. 연음과 축약, 탈락 등 취약 발음 구역을 정밀 딕테이션(받아쓰기)하여 어떠한 고난도 음원에서도 한 단어도 놓치지 않는 청취 집중력을 완성합니다.',
+        features: [
+          '평가원·EBS 수능특강 연계 음원 실전 딕테이션',
+          '1.2배속 및 1.4배속 고속 청취 훈련을 통한 실전 체감 난이도 하향',
+          '유형별 오답 함정(시간/금액 계산, 화자 의도 파악) 집중 클리닉',
+          '원어민 발음 음절 분절 및 쉐도잉(Shadowing) 낭독 트레이닝'
+        ],
+        clinic: '특정 음운 변동(연음/축약) 취약 학생 대상 구간 반복 딕테이션 및 스크립트 구조 독해 병행',
+        goal: '듣기 17문항 전원 만점(실수 0건) 유지'
+      },
+      reading: {
+        name: '독해 (Reading)',
+        englishTitle: 'Syntax & Logical Reading',
+        headline: '평가원 출제 코드에 입각한 구문 분석과 논리 전개도 매핑',
+        desc: '감(Feeling)에 의존하는 번역식 해석을 완전히 탈피합니다. 복잡한 수식 관계를 한눈에 파악하는 직독직해 구문독해부터, 단락의 주제문과 논리 전개(반박, 인과, 예시)를 도식화하는 구조 독해를 완성합니다.',
+        features: [
+          '수능 킬러 3대 유형(빈칸추론, 순서배열, 문장삽입) 논리 공식화',
+          '한 문장 단위 완벽 구문 분석(SVOC 구조 파악 & 관계사/분사 분해)',
+          '단락별 Topic Sentence 및 Key Evidence 도식화 훈련',
+          '고교별 부교재·외부지문 시험 범위 100% 심층 변형문제 풀이'
+        ],
+        clinic: '오답 선지 선택 이유 역추적 훈련, 매력적인 오답 함정을 스스로 찾아내는 논리적 근거 서술 클리닉',
+        goal: '시간 내 정확도 90% 이상 & 오답 선지 제거 능력 확립'
+      },
+      grammar: {
+        name: '문법 (Grammar)',
+        englishTitle: 'Zero-Deduction Grammar',
+        headline: '서술형 감점 제로! 개념 백지 인출부터 조건부 영작까지 완성',
+        desc: '중등 내신 100점과 고등 1등급을 가르는 핵심은 문법과 서술형입니다. 문법 개념을 남에게 설명할 수 있을 때까지 백지 테스트를 진행하고, 학교별 서술형 조건 영작을 완벽 대비합니다.',
+        features: [
+          '단원별 핵심 영문법 백지 인출 테스트 (개념 체계화)',
+          '중간·기말고사 대비 서술형 조건 영작 기출 500제 훈련',
+          '어법상 어색한 부분 찾아 고치기(이유 서술형) 완전 정복',
+          '인근 학교별(일반고/자사고) 역대 기출 문법 족보 DB 탑재'
+        ],
+        clinic: '학생의 오답 유형을 정밀 분석해 맞춤형 유사 변형 문제 50제 즉시 제공',
+        goal: '내신 서술형 감점 0점 및 어법 킬러문항 완전 정복'
+      }
+    };
+
+    const FAQ_DATA = [
+      {
+        q: '무료 진단 테스트는 어떻게 진행되며 얼마나 걸리나요?',
+        a: '학생의 현재 어휘력, 어법 개념 완성도, 구문 독해 속도 및 정확도를 3개 파트로 나누어 약 40분간 측정합니다. 테스트 직후 이금주 원장이 직접 학부모님 및 학생과 20분간 1:1 심층 상담을 통해 취약점 분석표와 3개월 성적 향상 로드맵을 제시해 드립니다.'
+      },
+      {
+        q: '수업 한 반 정원은 몇 명이며 어떻게 편성되나요?',
+        a: '철저한 1:1 밀착 관리를 위해 한 반 최대 6~8명 내외의 소수정예로 운영됩니다. 학년과 더불어 입학 진단 테스트 결과를 바탕으로 실력별·목표 학교별로 세분화하여 반이 배정됩니다.'
+      },
+      {
+        q: '학교별 내신 대비는 언제부터 어떻게 진행되나요?',
+        a: '시험 시작 4~5주 전부터 전면 내신 집중 체제로 전환됩니다. 인근 중·고교별 교과서, 외부지문, 부교재의 출제 경향을 전수 분석한 자체 제작 족보 변형 문제집(5단계)을 제공하며, 서술형 만점을 위한 1:1 영작 첨삭이 매일 진행됩니다.'
+      },
+      {
+        q: '클리닉 시간에 학생이 과제를 통과하지 못하면 어떻게 되나요?',
+        a: '이금주 영어 ACADEMY의 핵심 철칙은 "오늘 모른 것은 오늘 끝낸다"입니다. 단어 테스트나 일일 확인학습을 통과하지 못하면 전담 클리닉 강사와 함께 취약 파트 개념을 재학습하고 유사 문항 재시험을 통과할 때까지 1:1로 지도 후 안전하게 귀가시킵니다.'
+      },
+      {
+        q: '중등부와 고등부 수업 시간표 및 요일은 어떻게 되나요?',
+        a: '중등부는 주 2회 또는 주 3회(회당 2.5시간 + 1시간 클리닉) 코스로 운영되며, 고등부는 주 1회 몰입반(4시간 + 1:1 클리닉) 또는 주 2회반으로 구성되어 있습니다. 구체적인 요일과 시간표는 학생의 진단 결과 및 학교별 시간표에 맞춰 친절히 안내해 드립니다.'
+      }
+    ];
+
+    // 2. Rendering Functions
+    function renderFameGrid(type) {
+      const grid = document.getElementById('fameGrid');
+      const filtered = type === 'all' ? ACHIEVEMENTS_DATA : ACHIEVEMENTS_DATA.filter(item => item.type === type);
+      
+      grid.innerHTML = filtered.map(item => `
+        <div class="bg-white rounded-xl p-5 border border-[#E0EBE4] hover:border-[#2E5946]/50 hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3 text-xs">
+              <span class="font-bold px-2.5 py-0.5 rounded ${
+                item.type === 'high-gpa' ? 'bg-[#0F1C2D] text-white' :
+                item.type === 'middle-gamjeong' ? 'bg-[#EBF3EF] text-[#2E5946]' :
+                'bg-[#FDF8EB] text-[#9E731B] border border-[#F3E5BE]'
+              }">
+                ${item.type === 'high-gpa' ? '고등 내신' : item.type === 'middle-gamjeong' ? '중등 내신' : '수능 모의고사'}
+              </span>
+              <span class="font-semibold text-slate-700">${item.school} · ${item.name}</span>
+            </div>
+            <div class="text-base font-extrabold text-[#0F1C2D] mb-1.5 flex items-center gap-1.5">
+              ${item.grade.includes('전교 1등') ? '<i data-lucide="star" class="w-4 h-4 text-[#C59B27] fill-[#C59B27] shrink-0"></i>' : ''}
+              <span>${item.grade}</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">${item.highlight}</p>
+          </div>
+          <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+            <span class="text-slate-400">결과:</span>
+            <span class="font-bold text-[#C59B27]">${item.result}</span>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function filterFame(type) {
+      document.querySelectorAll('.fame-btn').forEach(btn => {
+        btn.classList.remove('bg-[#2E5946]', 'text-white', 'shadow-xs');
+        btn.classList.add('text-slate-600');
+      });
+      event.target.classList.add('bg-[#2E5946]', 'text-white', 'shadow-xs');
+      event.target.classList.remove('text-slate-600');
+      renderFameGrid(type);
+    }
+
+    function switchPillar(key) {
+      const p = PILLARS_DATA[key];
+      const container = document.getElementById('pillarCard');
+      
+      document.querySelectorAll('.pillar-tab').forEach(btn => {
+        btn.classList.remove('bg-[#2E5946]', 'text-white');
+        btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-[#D0E2D6]');
+      });
+      event.target.classList.add('bg-[#2E5946]', 'text-white');
+      event.target.classList.remove('bg-white', 'text-slate-700', 'border');
+
+      container.innerHTML = `
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-5">
+            <div>
+              <span class="text-xs font-bold text-[#2E5946] tracking-wider uppercase">${p.englishTitle}</span>
+              <h3 class="text-2xl font-extrabold text-[#0F1C2D] mt-1">${p.headline}</h3>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">${p.desc}</p>
+            <div class="space-y-2 pt-2">
+              <h4 class="text-xs font-bold text-slate-500 uppercase">핵심 학습 프로세스</h4>
+              <ul class="space-y-1.5 text-xs text-slate-700">
+                ${p.features.map(f => `<li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-[#2E5946] shrink-0"></i><span>${f}</span></li>`).join('')}
+              </ul>
+            </div>
+            <div class="p-4 rounded-xl bg-[#F8FAF9] border border-[#DEE7E2] flex items-center justify-between text-xs">
+              <span class="text-slate-500 font-medium">1:1 클리닉 목표 기준:</span>
+              <span class="font-bold text-[#2E5946]">${p.goal}</span>
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden border border-[#D5E3DA] shadow-sm">
+              <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80" alt="교재" class="w-full h-64 object-cover" />
+              <div class="p-4 bg-white border-t border-[#E2EBE5]">
+                <span class="text-xs font-bold text-[#0F1C2D]">이금주 원장 자체 제작 분석 교재</span>
+                <p class="text-[11px] text-slate-500 mt-0.5">학교별 5개년 기출 변형 500제 탑재</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      lucide.createIcons();
+    }
+
+    function switchTestTab(tab) {
+      const card = document.getElementById('testContentCard');
+      const midBtn = document.getElementById('middleTestTab');
+      const highBtn = document.getElementById('highTestTab');
+
+      if (tab === 'middle') {
+        midBtn.className = "px-5 py-2.5 text-xs sm:text-sm font-bold rounded-lg bg-[#2E5946] text-white shadow-xs cursor-pointer";
+        highBtn.className = "px-5 py-2.5 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer";
+
+        card.innerHTML = `
+          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 pb-6 border-b border-[#E2EBE5]">
+            <div>
+              <span class="text-xs font-bold text-[#2E5946] bg-[#EBF3EF] px-3 py-1 rounded-md">중등부 전용 진단 (중1 ~ 중3)</span>
+              <h3 class="text-2xl font-extrabold text-[#0F1C2D] mt-2">중등부 듣기 · 문법 · 독해 3대 영역 레벨테스트</h3>
+              <p class="text-sm text-slate-600 mt-1">소요 시간: 약 40분 · 측정 영역: 듣기 딕테이션, 문법 개념 백지 인출, 구문 독해 속도</p>
+            </div>
+            <a href="#contact" class="px-5 py-3 rounded-xl bg-[#2E5946] text-white font-bold text-xs sm:text-sm shadow-sm hover:bg-[#1E3E30] transition-colors whitespace-nowrap">
+              중등부 레벨테스트 신청 →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 py-6">
+            <div class="p-5 rounded-xl border border-[#DCE8E0] bg-[#F9FBFA] space-y-2">
+              <span class="text-xs font-bold text-[#2E5946]">PART 1</span>
+              <h4 class="text-base font-bold text-[#0F1C2D]">듣기 딕테이션 진단</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">1.2배속 음원을 통한 연음·탈락 구간 청취력 및 스크립트 빈칸 완성도 측정</p>
+            </div>
+            <div class="p-5 rounded-xl border border-[#DCE8E0] bg-[#F9FBFA] space-y-2">
+              <span class="text-xs font-bold text-[#2E5946]">PART 2</span>
+              <h4 class="text-base font-bold text-[#0F1C2D]">영문법 & 서술형 진단</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">학교별 서술형 킬러 조건 영작 및 문법 오류 찾아 고치기(이유 서술) 역량 평가</p>
+            </div>
+            <div class="p-5 rounded-xl border border-[#DCE8E0] bg-[#F9FBFA] space-y-2">
+              <span class="text-xs font-bold text-[#2E5946]">PART 3</span>
+              <h4 class="text-base font-bold text-[#0F1C2D]">구문 분석 & 어휘력</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">중등 필수 1,500 단어 체화도 및 복합 관계대명사/분사구문 직독직해 속도 분석</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#F4F8F5] border border-[#D0E2D6] flex flex-col sm:flex-row items-center justify-between text-xs gap-2">
+            <span>테스트 응시 후 <strong>이금주 원장이 직접 1:1로 취약점 레이더 분석표</strong>와 성적 향상 플랜을 브리핑해 드립니다.</span>
+            <span class="font-bold text-[#2E5946]">비용: 무료 (사전 예약제)</span>
+          </div>
+        `;
+      } else {
+        highBtn.className = "px-5 py-2.5 text-xs sm:text-sm font-bold rounded-lg bg-[#0F1C2D] text-white shadow-xs cursor-pointer";
+        midBtn.className = "px-5 py-2.5 text-xs sm:text-sm font-bold rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer";
+
+        card.innerHTML = `
+          <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 pb-6 border-b border-[#E2EBE5]">
+            <div>
+              <span class="text-xs font-bold text-[#C59B27] bg-[#FDF8EB] px-3 py-1 rounded-md">고등부 전용 진단 (고1 ~ 고3)</span>
+              <h3 class="text-2xl font-extrabold text-[#0F1C2D] mt-2">고등부 모의고사 유형 레벨테스트</h3>
+              <p class="text-sm text-slate-600 mt-1">소요 시간: 약 50분 · 측정 영역: 평가원 킬러 유형(빈칸/순서/삽입), 고교 내신 서술형</p>
+            </div>
+            <a href="#contact" class="px-5 py-3 rounded-xl bg-[#0F1C2D] text-white font-bold text-xs sm:text-sm shadow-sm hover:bg-[#1E3E30] transition-colors whitespace-nowrap">
+              고등부 레벨테스트 신청 →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 py-6">
+            <div class="p-5 rounded-xl border border-slate-200 bg-[#F8FAF9] space-y-2">
+              <span class="text-xs font-bold text-[#C59B27]">PART 1</span>
+              <h4 class="text-base font-bold text-[#0F1C2D]">평가원 3대 킬러 유형</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">빈칸추론, 순서배열, 문장삽입 논리 공식화 이해도 및 오답 매력도 판별력 측정</p>
+            </div>
+            <div class="p-5 rounded-xl border border-slate-200 bg-[#F8FAF9] space-y-2">
+              <span class="text-xs font-bold text-[#C59B27]">PART 2</span>
+              <h4 class="text-base font-bold text-[#0F1C2D]">고교별 외부지문 변형</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">제일고·마송고·운양고 등 실제 학교별 역대 기출 킬러 서술형 조건 영작 검증</p>
+            </div>
+            <div class="p-5 rounded-xl border border-slate-200 bg-[#F8FAF9] space-y-2">
+              <span class="text-xs font-bold text-[#C59B27]">PART 3</span>
+              <h4 class="text-base font-bold text-[#0F1C2D]">수능 1등급 안정도 진단</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">시간 배분(70분), 고난도 3점 문항 공략률 및 수능 최저학력기준 충족 가능성 산출</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#F8FAF9] border border-slate-200 flex flex-col sm:flex-row items-center justify-between text-xs gap-2">
+            <span>제일고, 마송고, 운양고, 김포고, 사우고 등 <strong>해당 고교별 역대 기출 성향</strong>에 맞춘 1등급 로드맵을 제공합니다.</span>
+            <span class="font-bold text-[#C59B27]">1등급 전략 컨설팅 포함</span>
+          </div>
+        `;
+      }
+    }
+
+    function renderReviews(filter) {
+      const grid = document.getElementById('reviewsGrid');
+      const filtered = filter === 'all' ? REVIEWS_DATA : REVIEWS_DATA.filter(item => item.category === filter);
+
+      grid.innerHTML = filtered.map(item => `
+        <div class="bg-[#FCFDFD] rounded-2xl p-6 sm:p-7 border border-[#D5E3DA] hover:border-[#2E5946]/50 hover:shadow-lg transition-all flex flex-col justify-between group relative overflow-hidden">
+          <i data-lucide="message-square-quote" class="w-16 h-16 text-[#2E5946]/5 absolute top-3 right-3 pointer-events-none"></i>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="flex items-center gap-1.5">
+                <span class="text-[11px] font-extrabold px-2.5 py-1 rounded-md ${
+                  item.category === 'parent' ? 'bg-[#EBF3EF] text-[#2E5946] border border-[#CCE0D4]' : 'bg-[#0F1C2D] text-white'
+                }">
+                  ${item.categoryLabel}
+                </span>
+                <span class="text-xs font-bold text-slate-700 bg-white px-2 py-0.5 rounded border border-slate-200">
+                  ${item.targetSchool}
+                </span>
+              </div>
+              <div class="flex items-center text-[#F5A623]">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-[#F5A623]"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-[#F5A623]"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-[#F5A623]"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-[#F5A623]"></i>
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-[#F5A623]"></i>
+              </div>
+            </div>
+
+            <div class="mb-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#FDF8EB] border border-[#F4E3BA] text-xs font-bold text-[#9E731B]">
+              <i data-lucide="trending-up" class="w-3.5 h-3.5 shrink-0"></i>
+              <span>${item.scoreJump}</span>
+            </div>
+
+            <h3 class="text-base sm:text-lg font-extrabold text-[#0F1C2D] tracking-tight leading-snug mb-3">
+              "${item.title}"
+            </h3>
+
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              ${item.content}
+            </p>
+          </div>
+
+          <div class="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-xs">
+            <div>
+              <p class="font-bold text-[#0F1C2D]">${item.author}</p>
+              <p class="text-[11px] text-slate-500">${item.studentInfo}</p>
+            </div>
+            <div class="flex items-center gap-1 text-[11px] text-[#2E5946] font-semibold bg-[#EBF3EF] px-2 py-0.5 rounded">
+              <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+              <span>실제 재원생 인증</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function filterReviews(category) {
+      document.querySelectorAll('.review-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-[#2E5946]', 'text-white', 'shadow-xs');
+        btn.classList.add('text-slate-600');
+      });
+      event.target.classList.add('bg-[#2E5946]', 'text-white', 'shadow-xs');
+      event.target.classList.remove('text-slate-600');
+      renderReviews(category);
+    }
+
+    function renderFAQs() {
+      const container = document.getElementById('faqAccordion');
+      container.innerHTML = FAQ_DATA.map((item, idx) => `
+        <div class="border border-[#DEE7E2] rounded-xl overflow-hidden bg-white">
+          <button onclick="toggleFaq(${idx})" class="w-full p-4 sm:p-5 text-left font-bold text-sm sm:text-base text-[#0F1C2D] flex items-center justify-between hover:bg-[#F8FAF9] transition-colors">
+            <span>Q. ${item.q}</span>
+            <i data-lucide="chevron-down" id="faqIcon-${idx}" class="w-5 h-5 text-slate-400 transition-transform"></i>
+          </button>
+          <div id="faqContent-${idx}" class="hidden p-4 sm:p-5 pt-0 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-[#FCFDFD]">
+            ${item.a}
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function toggleFaq(idx) {
+      const content = document.getElementById(`faqContent-${idx}`);
+      const icon = document.getElementById(`faqIcon-${idx}`);
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    // 3. Form Handling
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      document.getElementById('consultationForm').classList.add('hidden');
+      document.getElementById('formSuccessMessage').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function resetConsultationForm() {
+      document.getElementById('consultationForm').reset();
+      document.getElementById('consultationForm').classList.remove('hidden');
+      document.getElementById('formSuccessMessage').classList.add('hidden');
+    }
+
+    // 4. Initial Run
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFameGrid('all');
+      switchPillar('vocab');
+      switchTestTab('middle');
+      renderReviews('all');
+      renderFAQs();
+      lucide.createIcons();
+
+      // Mobile Menu
+      const btn = document.getElementById('mobileMenuBtn');
+      const menu = document.getElementById('mobileMenu');
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => menu.classList.add('hidden'));
+      });
+    });
+  </script>
+
+</body>
+</html>
